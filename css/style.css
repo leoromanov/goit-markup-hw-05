@@ -71,7 +71,7 @@ color: var(--text-color)
     line-height: 1.87;
     letter-spacing: 0.06em;
     text-decoration: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--transition);
 }
 
 /* Modal */
@@ -277,11 +277,11 @@ color: var(--text-color)
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
 }
-.hero-button:hover,
+/* .hero-button:hover,
 .hero-button:focus {
     background-color: var(--primary-bg-color)
     color: var(--accent-color)
-}
+} */
 
 /* Чем мы занимаемся */
 
@@ -317,7 +317,7 @@ border-radius: 4px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
-    color: #FFFFFF;
+    color: var(--primary-bg-color);
 }
 
 
@@ -416,7 +416,7 @@ padding-top: 30px;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--transition);
     
 }
 
@@ -430,7 +430,7 @@ padding-top: 30px;
     width: 20px;
     height: 20px;
     fill: var(--icon-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--transition);
     /* padding: 12px; */
 }
 
@@ -501,13 +501,13 @@ padding-top: 30px;
     border: 1px solid var(--network-color);
     box-sizing: border-box;
     border-radius: 4px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border var(--transition);
 }
 
 .clients-icon {
     /* width: 88px; */
     fill: var(--network-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--transition);
 }
 
 .brand {
@@ -538,9 +538,9 @@ padding-top: 30px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
-    color: #212121;
+    color: var(--link-color);
     text-decoration: none;
-    background-color: #F5F4FA;;
+    background-color: var(--secondary-bg-color);
     
 }
 .portfolio-link:hover,
@@ -549,6 +549,10 @@ padding-top: 30px;
 .portfolio-item:focus {
     color: var(--primary-bg-color);
     background-color: var(--accent-color);
+}
+.portfolio-item:hover,
+.portfolio-item:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-list .item:not(:first-child) {
@@ -559,8 +563,8 @@ padding-top: 30px;
     border-radius: 4px;
     background-color: var(--secondary-bg-color);
     padding: 6px 22px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition),
+    background-color var(--transition);
 }
 
 .portfolio-list { 
@@ -587,7 +591,7 @@ padding-top: 30px;
     outline: 1px solid var(--border-color)
     text-decoration: none;
     box-shadow: none;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    transition: box-shadow var(--transition);
     /* margin-right: 30px; */
 }
 
@@ -618,9 +622,9 @@ padding-top: 30px;
 
     width: 100%;
     height: 100%;
-    background: rgba(33, 150, 243, 0.9);
+    background: var(--overlay-color);
     transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--transition);
 }
 
 .worklist:hover .product-overlay {
@@ -638,7 +642,7 @@ padding-top: 30px;
 
     letter-spacing: 0.03em;
 
-    color: #FFFFFF;
+    color: var(--primary-bg-color)
 }
 
 .work-item {
